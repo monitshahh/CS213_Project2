@@ -7,7 +7,7 @@ import java.util.Calendar;
  * A date stores a year, month, and day and provides operations
  * for validating and comparing calendar dates.
  *
- * @author Hiya Savaliya & Monit Shah
+ * @author Hiya Savaliya, Monit Shah
  */
 public class Date implements Comparable<Date> {
 
