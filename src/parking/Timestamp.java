@@ -7,7 +7,7 @@ import util.Date;
  * A timestamp contains a calendar date, hour, and minute and can
  * be compared chronologically with another timestamp.
  *
- * @author Hiya Savaliya & Monit Shah
+ * @author Hiya Savaliya, Monit Shah
  */
 public class Timestamp implements Comparable<Timestamp> {
 

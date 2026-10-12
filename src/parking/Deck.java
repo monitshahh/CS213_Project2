@@ -294,19 +294,11 @@ public class Deck {
             status = "closed";
         }
 
-        String vehicleText;
-
-        if (numParked == 1) {
-            vehicleText = "vehicle";
-        } else {
-            vehicleText = "vehicles";
-        }
-
         return "Deck#" + number
                 + "@" + location
                 + "[" + status + " " + hour + "]"
                 + " [capacity " + capacity + "]"
-                + " [" + numParked + " " + vehicleText + "]"
+                + " [" + numParked + " vehicles]"
                 + " [" + location.getCounty() + "]";
     }
 }

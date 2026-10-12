@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
  * User interface for the Parking Management System.
  * Reads commands and performs parking management operations.
  *
- * @author Hiya Savaliya & Monit Shah
+ * @author Hiya Savaliya, Monit Shah
  */
 public class Operation {
 
@@ -842,8 +842,12 @@ public class Operation {
             return null;
         }
 
-        int hour = Integer.parseInt(hourText);
-        int minute = Integer.parseInt(minuteText);
+        Integer hour = parseNumber(hourText, "Time");
+        Integer minute = parseNumber(minuteText, "Time");
+
+        if (hour == null || minute == null) {
+            return null;
+        }
 
         if (hour < MIN_HOUR || hour > MAX_HOUR) {
             System.out.println(hour + " - invalid hour.");
@@ -882,9 +886,13 @@ public class Operation {
             return null;
         }
 
-        int year = Integer.parseInt(yearText);
-        int month = Integer.parseInt(monthText);
-        int day = Integer.parseInt(dayText);
+        Integer year = parseNumber(yearText, "Date");
+        Integer month = parseNumber(monthText, "Date");
+        Integer day = parseNumber(dayText, "Date");
+
+        if (year == null || month == null || day == null) {
+            return null;
+        }
 
         Date date = new Date(year, month, day);
 
